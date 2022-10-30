@@ -1,0 +1,22 @@
+CREATE TABLE trevorrowsports (id INTEGER PRIMARY KEY, productname TEXT, quantity INTEGER, price INTEGER, sport TEXT, aisle TEXT);
+
+INSERT INTO trevorrowsports VALUES (1, "basketballs", 20, 25, "basketball", 1);
+INSERT INTO trevorrowsports VALUES (2, "baseballs", 50, 10, "baseball", 1);
+INSERT INTO trevorrowsports VALUES (3, "golfballs", 100, 5, "golf", 1);
+INSERT INTO trevorrowsports VALUES (4, "footballs", 40, 20, "football", 1);
+INSERT INTO trevorrowsports VALUES (5, "soccerballs", 20, 15, "soccer", 1);
+INSERT INTO trevorrowsports VALUES (6, "basketball hoops", 5, 500, "basketball", 2);
+INSERT INTO trevorrowsports VALUES (7, "baseball bats", 20, 80, "baseball", 2);
+INSERT INTO trevorrowsports VALUES (8, "golf clubs", 10, 200, "golf", 2);
+INSERT INTO trevorrowsports VALUES (9, "football gloves", 20, 20, "football", 2);
+INSERT INTO trevorrowsports VALUES (10, "soccer cleats", 20, 80, "soccer", 3);
+INSERT INTO trevorrowsports VALUES (11, "baseball cleats", 20, 80, "baseball", 3);
+INSERT INTO trevorrowsports VALUES (12, "basketball shoes", 20, 90, "basketball", 3);
+INSERT INTO trevorrowsports VALUES (13, "baseball gloves", 40, 20, "baseball", 4);
+INSERT INTO trevorrowsports VALUES (14, "golf tees", 50, 5, "golf", 4);
+INSERT INTO trevorrowsports VALUES (15, "basketball shorts", 20, 30, "basketball", 4);
+
+SELECT * FROM trevorrowsports; 
+SELECT * FROM trevorrowsports WHERE price GROUP BY price;
+SELECT SUM(quantity) FROM trevorrowsports; 
+SELECT * FROM trevorrowsports WHERE price < 50
