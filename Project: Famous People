@@ -1,0 +1,32 @@
+CREATE TABLE athletes (id INTEGER PRIMARY KEY, name TEXT, sport TEXT, position TEXT, rank INTEGER);
+
+INSERT INTO athletes VALUES (1, "Gary Payton", "basketball", "point guard", 10);
+INSERT INTO athletes VALUES (2, "Kobe Bryant", "basketball", "shooting gaurd", 3);
+INSERT INTO athletes VALUES (3, "Michael Jordan", "basketball", "shooting guard", 1);
+INSERT INTO athletes VALUES (4, "Tom Brady", "football", "quarterback", 1);
+INSERT INTO athletes VALUES (5, "Ken Griffey Jr", "baseball", "centerfielder", 4);
+
+
+CREATE TABLE history (id INTEGER PRIMARY KEY AUTOINCREMENT, playoffs INTEGER, championships INTEGER, individual_awards INTEGER);
+
+INSERT INTO history VALUES (1, 6, 1, 1);
+INSERT INTO history VALUES (2, 10, 6, 10);
+INSERT INTO history VALUES (3, 12, 7, 5);
+INSERT INTO history VALUES (4, 4, 7, 3);
+INSERT INTO history VALUES (5, 0, 0, 1);
+
+CREATE TABLE personal (id INTEGER PRIMARY KEY, spouse TEXT, children INTEGER);
+
+INSERT INTO personal VALUES (1, "Elisa Payton", 2);
+INSERT INTO personal VALUES (2, "Vanessa Bryant", 4);
+INSERT INTO Personal VALUES (3, "Chantel Jordan", 3);
+INSERT INTO personal VALUES (4, "Giselle Brady", 3);
+INSERT INTO personal VALUES (5, "Ashley Serra", 0);
+
+SELECT name, sport, position, playoffs, championships, individual_awards FROM athletes
+JOIN history
+ON athletes.id=history.id;
+
+SELECT name, sport, spouse, children FROM athletes
+JOIN personal
+ON athletes.id=personal.id
